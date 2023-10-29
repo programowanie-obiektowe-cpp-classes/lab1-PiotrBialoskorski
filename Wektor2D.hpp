@@ -39,10 +39,10 @@ class Wektor2D
         }
         Wektor2D& operator+(const Wektor2D& wek2)
         { 
-            Wektor2D wek1;
-            wek1.x = this->x + wek2.x;
-            wek1.y = this->y + wek2.y;
-            return wek1;
+            Wektor2D* wek1=new Wektor2D();
+            wek1->x = this->x + wek2.x;
+            wek1->y = this->y + wek2.y;
+            return *wek1;
         }
         double  operator*(const Wektor2D& wek2) 
         { 
